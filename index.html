@@ -55,39 +55,23 @@
         </menu>
 
 
-        <section id="upload-container">
+        <section id="upload">
+            <div class="wrapper">
 
-            <div class="slot">
-                <img src="" alt="">
-            </div>
-            <div class="slot">
-
-
-            </div>
-
-            <div class="slot">
-
-
-            </div>
-
-        </section>
-
-
-        <section id="notes">
-            <div class="notes-position">
-                <div class="text">
-                    <textarea id="autoresizing" placeholder="Write your notes..." class="autosize"></textarea>
-
-                    <div class="icons">
-                        <div><img onclick="clearTextArea()" src="/fotoapp/img/square-minus-regular.svg"
-                                alt="Clear Task">
-                        </div>
-                        <div><img onclick="addNote()" src="/fotoapp/img/floppy-disk-regular.svg" alt="Save Task">
-                        </div>
-
-
-                    </div>
+                <div class="input-div">
+                    <h1>File Upload</h1>
+                    <form action="#">
+                        <p>Browse File to Upload</p>
+                        <input type="file" class="file-input" multiple="multiple"
+                            accept="image/jpeg, image/png, image/jpg" hidden>
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </form>
                 </div>
+
+                <output>
+
+
+                </output>
 
 
             </div>

@@ -373,118 +373,42 @@ header {
 
 }
 
-/*------ Notes ------*/
+/*------ Upload ------*/
 
-#notes {
+#upload {
     position: absolute;
-    top: 30px;
+    top: 10px;
     left: 200px;
-    width: 60%;
-    height: 100%;
+    width: 50%;
 
 }
 
-
-/* #notes textarea:focus {
-    padding-top: 10px;
-    height: 150px;
-} */
-
-#notes textarea {
-    border-radius: 10px;
-    padding: 10px 125px 12px 16px;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-    letter-spacing: .01428571em;
-    min-height: 52px;
-    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%),
-        0 2px 6px 2px rgb(60 64 67 / 15%);
-    border: none;
-    overflow: hidden;
-    outline: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    position: absolute;
-    width: 100%;
-    resize: none;
-
-
-    /* transition: width 0.5s; */
-
-
-}
-
-
-#notes .icons {
-    position: absolute;
-    height: 46px;
-    align-items: center;
+#upload .wrapper form {
+    height: 167px;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 10px;
-    margin-top: 3px;
-
-}
-
-#notes .text {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-}
-
-#notes .icons img {
-    height: 24px;
-    margin-left: 9px;
-    margin-right: 9px;
     cursor: pointer;
-
-}
-
-#notes .icons div {
-    display: flex;
-    justify-content: center;
+    margin: 30px 0;
     align-items: center;
-    width: 52px;
-    height: 52px;
-    margin-top: 6px;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #5f6368;
 }
 
-#notes .icons div:hover {
-    background-color: rgba(60, 64, 67, .08);
-    border-radius: 100%;
-
-}
-
-#notes .notes-position {
-    position: relative;
-    width: 100%;
-    min-height: 46px;
-    display: flex;
-    justify-content: flex-start;
-
-
-}
-
-#autoresizing {
-    display: block;
-    overflow: hidden;
-    resize: none;
-}
-
-#notes label {
+#upload form :where(i, p) {
     color: #5f6368;
-    letter-spacing: .07272727em;
-    font-size: .6875rem;
-    font-weight: 500;
-    line-height: 1rem;
-    text-transform: uppercase;
-    margin-left: 15px;
-    margin-top: 15px;
-
 }
+
+#upload form i {
+    font-size: 50px;
+}
+
+#upload form p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+
 
 /*------ List ------*/
 
