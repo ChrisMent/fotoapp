@@ -34,24 +34,6 @@ let pinnedNote = []; // Array für Pins
 let archive = [];
 let trash = [];
 
-//! MENÜ: Den Text bei den Kategoriensymbolen auf und zu
-
-function toggleMenu() {
-
-    // Es wird nach allen Elementen gesucht, die die Klasse 'menu-icon-text' haben
-    let elements = document.querySelectorAll('.menu-icon-text');
-    // Es wird eine Schleife erstellt, die jedes Element durchläuft
-    elements.forEach((element) => {
-        // Es wird nach dem ersten Link-Element innerhalb eines Elements mit der Klasse 'menu-icon-text' gesucht.
-        let a = element.querySelector('a');
-        if (a.classList.contains('d-none')) {
-            a.classList.remove('d-none');
-        } else {
-            a.classList.add('d-none');
-        }
-    });
-}
-
 //! TEXTAREA: Inhalt Textarea löschen
 
 function clearTextArea() {
