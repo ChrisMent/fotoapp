@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fotoapp/styles/style.css" />
+    <link rel="stylesheet" href="/fotoapp/styles/font.css" />
+    <link rel="stylesheet" href="/fotoapp//fonts/fontawesome/css/all.css" />
+    <script src="/fotoapp/scripts/script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/fotoapp/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fotoapp/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fotoapp/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/fotoapp/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/fotoapp/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ff0000">
+    <meta name="description" content="" />
+    <title>Foto Gallary</title>
+
+    <link rel="stylesheet" href="/fotoapp/templates/header.html">
+
+</head>
+
+<body id="start" onload="init()">
+    <header class="header" w3-include-html="/fotoapp/templates/header.html"></header>
+    <main class="spacing-layer">
+
+        <menu>
+            <div id="menu-icons">
+                <div onclick="openNotes()" class="menu-icon-text">
+                    <img src="/fotoapp/img/image-regular.svg" alt="Show open notes">
+                    <a href="#index">Photos</a>
+
+                </div>
+                <div onclick="showArchivedNotes()" class="menu-icon-text">
+                    <img src="/fotoapp/img/star-regular.svg" alt="Show archive">
+                    <a href="#archive">Favorites</a>
+                </div>
+                <div onclick="showArchivedNotes()" class="menu-icon-text">
+                    <img src="/fotoapp/img/share-nodes-solid.svg" alt="Show archive">
+                    <a href="#archive">Share</a>
+                </div>
+                <div onclick="showArchivedNotes()" class="menu-icon-text">
+                    <img src="img/circle-down-regular.svg" alt="Show archive">
+                    <a href="#archive">Archive</a>
+                </div>
+                <div onclick="showTrashedNotes()" class="menu-icon-text">
+                    <img src="img/trash-can-regular.svg" alt="Shwo trash">
+                    <a href="#trash">Trash</a>
+                </div>
+            </div>
+
+        </menu>
+
+
+        <section id="upload-container">
+
+            <div class="slot">
+                <img src="" alt="">
+            </div>
+            <div class="slot">
+
+
+            </div>
+
+            <div class="slot">
+
+
+            </div>
+
+        </section>
+
+
+        <section id="notes">
+            <div class="notes-position">
+                <div class="text">
+                    <textarea id="autoresizing" placeholder="Write your notes..." class="autosize"></textarea>
+
+                    <div class="icons">
+                        <div><img onclick="clearTextArea()" src="/fotoapp/img/square-minus-regular.svg"
+                                alt="Clear Task">
+                        </div>
+                        <div><img onclick="addNote()" src="/fotoapp/img/floppy-disk-regular.svg" alt="Save Task">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="popup-background d-none" id="popup-background"></div>
+            <div class="popup d-none" id="popup">
+                <p>Do you want to permanently delete this note?</p>
+                <button id="confirm" class="button-style" type="button">Ja</button>
+                <button id="reject" class="button-style" type="button">Nein</button>
+            </div>
+
+            <div id="notes-area">
+
+                <div id="pinned-note">
+
+                </div>
+
+                <div id="mynotes">
+
+                </div>
+
+                <div id="archived-notes">
+
+                </div>
+
+                <div id="trashed-notes">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer w3-include-html="/fotoapp/templates/footer.html"></footer>
+    <script src="/fotoapp/scripts/eventhandling.js"></script>
+</body>
+
+</html>
