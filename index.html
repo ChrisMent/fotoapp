@@ -31,24 +31,24 @@
             <div id="menu-icons">
                 <div onclick="openNotes()" class="menu-icon-text">
                     <img src="/fotoapp/img/image-regular.svg" alt="Show open notes">
-                    <a href="#index">Photos</a>
+                    <a class="link-text" href="#index">Photos</a>
 
                 </div>
                 <div onclick="showArchivedNotes()" class="menu-icon-text">
                     <img src="/fotoapp/img/star-regular.svg" alt="Show archive">
-                    <a href="#archive">Favorites</a>
+                    <a class="link-text" href="#archive">Favorites</a>
                 </div>
                 <div onclick="showArchivedNotes()" class="menu-icon-text">
                     <img src="/fotoapp/img/share-nodes-solid.svg" alt="Show archive">
-                    <a href="#archive">Share</a>
+                    <a class="link-text" href="#archive">Share</a>
                 </div>
                 <div onclick="showArchivedNotes()" class="menu-icon-text">
                     <img src="img/circle-down-regular.svg" alt="Show archive">
-                    <a href="#archive">Archive</a>
+                    <a class="link-text" href="#archive">Archive</a>
                 </div>
                 <div onclick="showTrashedNotes()" class="menu-icon-text">
                     <img src="img/trash-can-regular.svg" alt="Shwo trash">
-                    <a href="#trash">Trash</a>
+                    <a class="link-text" href="#trash">Trash</a>
                 </div>
             </div>
 
@@ -58,12 +58,10 @@
         <section id="upload">
             <div class="wrapper">
                 <div class="input-div">
-                    <form action="#">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                        <p>Browse File to Upload</p>
-                        <input type="file" class="file-input" multiple="multiple"
-                            accept="image/jpeg, image/png, image/jpg" hidden>
-                    </form>
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Browse File to Upload</p>
+                    <input type="file" class="file" multiple="multiple" accept="image/jpeg, image/png, image/jpg">
+
                 </div>
 
                 <output>
