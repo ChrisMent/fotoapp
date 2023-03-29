@@ -44,8 +44,10 @@ i {
 
 main {
     position: relative;
+    display: flex;
+    justify-content: start;
     top: 80px;
-    width: 100vw;
+    width: 100%;
 
 
 }
@@ -130,7 +132,7 @@ main {
 
 }
 
-/*------ Navigation List ------*/
+/*------ Header ------*/
 
 header {
     position: fixed;
@@ -143,49 +145,42 @@ header {
 }
 
 
-
-#main-nav .nav-wrapper {
+#head-nav .head-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
 }
 
-#main-nav i {
+#head-nav i {
     padding: 20px;
 }
 
-#main-nav p {
+#head-nav p {
     font-size: 24px;
     color: #5f6368;
 
 }
 
-#main-nav .fa-bars {
+#head-nav .fa-bars {
     color: #5f6368;
-
-
 }
 
-#main-nav .fa-note-sticky {
-    color: rgb(255, 174, 25);
-}
-
-#main-nav .navigation {
+#head-nav .navigation-links {
     display: flex;
     align-items: center;
     width: auto;
 
 }
 
-#main-nav .navigation a {
+#head-nav .navigation-links a {
     text-decoration: none;
     margin-right: 20px;
     font-weight: 500;
 
 }
 
-#main-nav .navigation div {
+#head-nav .navigation-links div {
     height: 48px;
     width: 48px;
     align-items: center;
@@ -194,20 +189,20 @@ header {
 
 }
 
-#main-nav .nav-hov:hover {
+#head-nav .nav-hov:hover {
     background-color: rgba(60, 64, 67, .08);
     border-radius: 100%;
 
 }
 
-#main-nav .searchbar {
+#head-nav .searchbar {
     position: relative;
     width: 60%;
 
 
 }
 
-#main-nav .searchbar input {
+#head-nav .searchbar input {
     border-radius: 10px;
     box-shadow: 0 1px 1px 0 rgb(65 69 73 / 30%),
         0 1px 3px 1px rgb(65 69 73 / 15%);
@@ -225,13 +220,13 @@ header {
 
 }
 
-#main-nav .searchbar input:focus {
+#head-nav .searchbar input:focus {
     background: rgba(255, 255, 255, 1);
     transition: background 125ms ease-in-out;
     border: none;
 }
 
-#main-nav .searchbar i {
+#head-nav .searchbar i {
     position: absolute;
     top: 4px;
     left: 40px;
@@ -239,12 +234,12 @@ header {
 
 }
 
-#main-nav .settings i {
+#head-nav .settings i {
     color: #5f6368;
     width: auto;
 }
 
-#main-nav img {
+#head-nav img {
     width: 48px;
     height: 48px;
     z-index: 0;
@@ -252,7 +247,7 @@ header {
 
 }
 
-#main-nav .nav-profile {
+#head-nav .head-profile {
     padding: 17px;
     border-radius: 100%;
     border: 2px solid #bbbcbe;
@@ -324,19 +319,33 @@ header {
     padding-top: 2px;
 }
 
-/*------ Upload ------*/
+/*------ Upload Area ------*/
 
 .input-div {
-    width: 100%;
-    height: 200px;
+    height: 177px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 2px dotted black;
+    flex-direction: column;
+    border: 2px dotted #5f6368;
     background-color: white;
-    position: relative;
+    position: absolute;
+    padding: 20px;
+    box-sizing: content-box;
+    left: 200px;
+    right: 37px;
+    top: 35px;
+}
+
+.input-div img {
+    height: 40px;
+    width: 40px;
+}
+
+.input-div p {
+    color: #5f6368;
 }
 
 .file {
@@ -347,11 +356,18 @@ header {
     cursor: pointer;
 }
 
-/*------ Image ------*/
+/*------ Image Area------*/
+
+.images-preview {
+    position: absolute;
+    box-sizing: content-box;
+    left: 200px;
+    right: 37px;
+    top: 280px;
+
+}
 
 output {
-    width: 100%;
-    min-height: 150px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -361,7 +377,7 @@ output {
 }
 
 output .image {
-    height: 150px;
+    height: 250px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -370,7 +386,7 @@ output .image {
 
 output .image img {
     height: 100%;
-    width: 100%;
+
 }
 
 output .image span {
