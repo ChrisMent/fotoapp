@@ -27,10 +27,14 @@ for (let i = 0; i < icon.length; i++) {
     });
 }
 
+
+//! Upload Bereich mit Drag and Drop
+
 const inputDiv = document.querySelector(".input-div")
 const input = document.querySelector("input")
 const output = document.querySelector("output")
 let imagesArray = []
+
 
 input.addEventListener("change", () => {
     const files = input.files
@@ -38,9 +42,10 @@ input.addEventListener("change", () => {
         imagesArray.push(files[i])
     }
     displayImages()
+
 })
 
-inputDiv.addEventListener("drop", () => {
+inputDiv.addEventListener("drop", (e) => {
     e.preventDefault()
     const files = e.dataTransfer.files
     for (let i = 0; i < files.length; i++) {
@@ -50,6 +55,7 @@ inputDiv.addEventListener("drop", () => {
             imagesArray.push(files[i])
     }
     displayImages()
+
 })
 
 function displayImages() {
@@ -63,7 +69,11 @@ function displayImages() {
     output.innerHTML = images
 }
 
+
+
 function deleteImage(index) {
     imagesArray.splice(index, 1)
     displayImages()
 }
+
+
